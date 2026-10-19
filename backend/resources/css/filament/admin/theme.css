@@ -1,0 +1,105 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@layer components {
+    @media (min-width: 1024px) {
+        .fi-main-ctn > .fi-topbar {
+            width: calc(100% - var(--sidebar-width));
+            margin-inline-start: var(--sidebar-width);
+        }
+
+        .fi-main-ctn > .fi-main {
+            min-width: 0;
+            padding-inline-start: 6.5rem;
+        }
+    }
+
+    .fi-main-sidebar.fi-sidebar {
+        background: linear-gradient(180deg, #172d3a 0%, #1c3b43 48%, #162f3b 100%);
+        color: #f8fafc;
+        border-right: 1px solid rgb(148 163 184 / 18%);
+    }
+
+    .fi-main-sidebar .fi-sidebar-header {
+        background: #142a37;
+        border-bottom: 1px solid rgb(255 255 255 / 10%);
+        color: #f4eee5;
+    }
+
+    .fi-main-sidebar .fi-logo,
+    .fi-main-sidebar .fi-sidebar-header a {
+        color: #f4eee5;
+    }
+
+    .fi-main-sidebar .fi-sidebar-nav {
+        gap: 1.25rem;
+        padding: 1.4rem 1rem;
+        scrollbar-color: rgb(148 163 184 / 30%) transparent;
+    }
+
+    .fi-main-sidebar .fi-sidebar-nav::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .fi-main-sidebar .fi-sidebar-nav::-webkit-scrollbar-thumb {
+        border-radius: 999px;
+        background: rgb(148 163 184 / 30%);
+    }
+
+    .fi-main-sidebar .fi-sidebar-nav-groups {
+        gap: 1.25rem;
+    }
+
+    .fi-main-sidebar .fi-sidebar-group-label {
+        color: #b4c7c7;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.025em;
+    }
+
+    .fi-main-sidebar .fi-sidebar-group-icon,
+    .fi-main-sidebar .fi-sidebar-group-collapse-button {
+        color: #a9c0bf;
+    }
+
+    .fi-main-sidebar .fi-sidebar-item-button {
+        min-height: 2.75rem;
+        border-radius: 0.8rem;
+        padding: 0.65rem 0.75rem;
+        color: #e3e7e4;
+    }
+
+    .fi-main-sidebar .fi-sidebar-item-button:hover,
+    .fi-main-sidebar .fi-sidebar-item-button:focus-visible {
+        background: rgb(255 255 255 / 7%);
+    }
+
+    .fi-main-sidebar .fi-sidebar-item-label {
+        color: #e3e7e4;
+        font-size: 0.94rem;
+        font-weight: 550;
+        line-height: 1.35;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+    }
+
+    .fi-main-sidebar .fi-sidebar-item-icon {
+        color: #9eafb0;
+    }
+
+    .fi-main-sidebar .fi-sidebar-item.fi-active > .fi-sidebar-item-button {
+        background: rgb(181 125 69 / 20%);
+        box-shadow: inset 3px 0 0 #b57d45;
+    }
+
+    .fi-main-sidebar .fi-sidebar-item.fi-active .fi-sidebar-item-label,
+    .fi-main-sidebar .fi-sidebar-item.fi-active .fi-sidebar-item-icon {
+        color: #f0d7b9;
+        font-weight: 700;
+    }
+
+    .fi-main-sidebar .fi-sidebar-item-button:focus-visible {
+        outline: 2px solid #91b6b5;
+        outline-offset: 2px;
+    }
+}
